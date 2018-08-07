@@ -1,4 +1,4 @@
-FROM ez123/db-mysql:5.7
+FROM ez123/db-mysql:5.7-ssl
 
 MAINTAINER HighSkillz <webdev@highskillz.com>
 
