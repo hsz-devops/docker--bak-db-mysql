@@ -18,4 +18,4 @@ if ! getent group "${DUMP_GROUP}" | grep "${DUMP_USER}" &>/dev/null; then
 fi
 
 # Setup our crontab entry
-export CRONTAB_ENTRY="${DUMP_CRONTAB} bash /run-bak.sh ${DUMP_USER} ${DUMP_GROUP}"
+export CRONTAB_ENTRY="${DUMP_CRONTAB} bash /run-mysqldump.sh ${DUMP_USER} ${DUMP_GROUP}"
