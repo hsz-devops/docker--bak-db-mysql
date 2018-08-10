@@ -23,12 +23,12 @@ if [ "${USE_DATE_IN_DEST}" == "1" ]; then
     CURRENT_MONTH="${T_STAMP:4:2}"
     CURRENT_DAY="${T_STAMP:6:2}"
     BACKUP_DIR_DST="${BACKUP_ROOT_DST}/${CURRENT_YEAR}/${CURRENT_MONTH}/${CURRENT_DAY}"
-
-    ### create backups directory if not present
-    mkdir -p "${BACKUP_DIR_DST}"
 else
     BACKUP_DIR_DST="${BACKUP_ROOT_DST}"
 fi
+
+### create backups directory if not present
+mkdir -p "${BACKUP_DIR_DST}"
 
 ls -la "${BACKUP_DIR_DST}" ||true
 [ -d "${BACKUP_DIR_DST}" ] || exit -5
